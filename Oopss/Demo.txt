@@ -1,0 +1,18 @@
+
+
+class 					Abstract class 			Interface
+
+class A{}				abstract class A{}		interface I{}
+
+A(){}					yes 				not 
+
+int a;					yes 				no ? no constructor 
+
+A a = new A();obj ? 			no 				No 
+
+
+only normal methods 			it can be both 			only abstract
+
+multiple inheritance : not 		not 				yes  
+
+only normal methods (0 % )		(0--50%-100%)			100%
