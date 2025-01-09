@@ -18,9 +18,11 @@ import com.example.demo.service.service2;
 
 @RestController
 public class controller2 {
+	
 	@Autowired
 	private service2 serv;
-	@GetMapping("/getProduct")
+	
+	@GetMapping("/getProductS2")
 	public List<model> FindAllModel() {
 		
 		List<model> model = new ArrayList<model>();
@@ -28,21 +30,21 @@ public class controller2 {
 		
 		return model;
 	}
-	@GetMapping("/getProduct/{id}")
+	@GetMapping("/getProductS2/{id}")
 	public model FindModelbyId(@PathVariable int id) {
 		return serv.FindModelbyId(id);
 	}
-	@PostMapping("/setProd")
+	@PostMapping("/setProdS2")
 	public void setProd(@RequestBody model m)
 	{
 		serv.setProd(m);
 	}
-	@DeleteMapping("/deleteProd/{id}")
+	@DeleteMapping("/deleteProdS2/{id}")
 	public void deleteProd(@PathVariable int id)
 	{
 		serv.deleteProd(id);
 	}
-	@PutMapping("updateProd/{id}")
+	@PutMapping("updateProdS2/{id}")
 	public void updateProd(@PathVariable int id, @RequestBody model m)
 	{
 		serv.update(id,m);

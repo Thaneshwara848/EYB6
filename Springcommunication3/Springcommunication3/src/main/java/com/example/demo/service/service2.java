@@ -16,16 +16,17 @@ public class service2 {
 	@Autowired
 	RestTemplate restTemplate;
 	
-	final String ROOT_URI = "http://localhost:9999/getProduct";
-	final String ROOT_URI2 = "http://localhost:9999/setProd";
-	final String ROOT_URI3 = "http://localhost:9999/deleteProd";
-	final String ROOT_URI4 = "http://localhost:9999/updateProd";
+	final String ROOT_URI = "http://localhost:9999/getProductS1";
+	final String ROOT_URI2 = "http://localhost:9999/setProdS1";
+	final String ROOT_URI3 = "http://localhost:9999/deleteProdS1";
+	final String ROOT_URI4 = "http://localhost:9999/updateProdS1";
 	public List<model> findAllMyModel() {
 	
 		ResponseEntity<model[]> response = restTemplate.getForEntity(ROOT_URI, model[].class);
 		System.out.println(response);
 		return Arrays.asList(response.getBody());
 	}
+	
 public model FindModelbyId(int id) {
 		
 		ResponseEntity<model> response = restTemplate.getForEntity(ROOT_URI+"/"+id, model.class);

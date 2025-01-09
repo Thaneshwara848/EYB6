@@ -12,6 +12,7 @@ import com.example.demo.repo.myRepo;
 public class services {
 	@Autowired
 	private myRepo repo;
+	
 	public List<model2> findAllMyModel(){
 		return repo.findAll();
 	}

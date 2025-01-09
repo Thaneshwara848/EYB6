@@ -19,30 +19,30 @@ import com.example.demo.service.services;
 public class myController {
 	@Autowired
 	private services serv;
-	@GetMapping("/getProduct")
+	@GetMapping("/getProductS1")
 	public List<model2> FindAllModel() {
 		List<model2> model = new ArrayList<model2>();
 		model = serv.findAllMyModel();
 		return model;
 	}
 	
-	@GetMapping("/getProduct/{id}")
+	@GetMapping("/getProductS1/{id}")
 	public model2 findById(@PathVariable int id)
 	{
 		return serv.findById(id);
 		
 	}
-	@PostMapping("/setProd")
+	@PostMapping("/setProdS1")
 	public  void setProd(@RequestBody model2 m) 
 	{
 		serv.save(m);
 	}
-	@DeleteMapping("/deleteProd")
+	@DeleteMapping("/deleteProdS1/{id}")
 	public void deleteProd(@PathVariable int id)
 	{
 		serv.delete(id);
 	}
-	@PutMapping("/updateProd/{id}")
+	@PutMapping("/updateProdS1/{id}")
 	public void updateProd(@PathVariable int id, @RequestBody model2 model2)
 	{
 		serv.update(id, model2);
