@@ -16,7 +16,7 @@ public class service2 {
 	@Autowired
 	RestTemplate restTemplate;
 	
-	final String ROOT_URI = "http://localhost:9999/getProductS1";
+	final String ROOT_URI = "EUREKACLIENTDEMO1/getProductS1";
 	final String ROOT_URI2 = "http://localhost:9999/setProdS1";
 	final String ROOT_URI3 = "http://localhost:9999/deleteProdS1";
 	final String ROOT_URI4 = "http://localhost:9999/updateProdS1";
